@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/buttonAnalyze"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Анализировать SMS" />
+
+    <TextView
+        android:id="@+id/textIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сумма зачислений: 0"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/textExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сумма списаний: 0"
+        android:textSize="16sp"
+        android:layout_marginBottom="10dp" />
+
+    <ListView
+        android:id="@+id/listViewSms"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
