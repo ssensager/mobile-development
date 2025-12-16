@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F2F4">
+
+    <!-- ===== CONTENT ===== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V2BOX"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/onest"
+                android:paddingBottom="20dp"/>
+
+            <!-- ===== STACK BLOCK ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_stack">
+
+                <!-- ITEM -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Использование памяти"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                    <TextView
+                        android:id="@+id/tvMemory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 KB"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="#E0E0E0"/>
+
+                <!-- ITEM -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Отправка"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                    <TextView
+                        android:id="@+id/tvUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 KB"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="30dp"
+                    android:background="#E0E0E0"/>
+
+                <!-- ITEM -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Загрузка"
+                        android:textSize="14sp"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                    <TextView
+                        android:id="@+id/tvDownload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 KB"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:fontFamily="@font/onest"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- TEXT -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Останавливать во сне"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#000000"
+                            android:fontFamily="@font/onest"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="улучшает энергопотребление"
+                            android:textSize="12sp"
+                            android:textColor="#6E6E6E"
+                            android:fontFamily="@font/onest"/>
+                    </LinearLayout>
+
+                    <!-- SWITCH -->
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchSleep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>>
+
+            </LinearLayout>
+            <!-- ===== END STACK ===== -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/sliderContainer"
+            android:layout_width="300dp"
+            android:layout_height="72dp"
+            android:layout_margin="16dp">
+
+            <!-- Фон -->
+            <View
+                android:id="@+id/sliderTrack"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_slider_black"/>
+
+            <!-- Текст -->
+            <TextView
+                android:id="@+id/sliderText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Сдвинь для подключения"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:fontFamily="@font/onest"/>
+
+            <!-- Thumb -->
+            <FrameLayout
+                android:id="@+id/sliderThumb"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_slider_thumb">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_right"
+                    app:tint="#000000"/>
+            </FrameLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to ping"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/onest"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <!-- ===== SLIDER CONNECT ===== -->
+
+
+
+    <!-- ===== BOTTOM NAV ===== -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigation"
+        app:backgroundTint="@color/white"
+        app:menu="@menu/bottom_menu"/>
+
+</LinearLayout>
+
